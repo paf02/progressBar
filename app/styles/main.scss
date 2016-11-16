@@ -1,0 +1,14 @@
+// bower:scss
+// endbower
+
+@import "core/variables";
+@import "core/typo";
+@import "helpers/mixins";
+
+html, body {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+@import "module/modal";

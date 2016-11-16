@@ -1,0 +1,40 @@
+//
+// Mixins
+// --------------------------------------------------
+
+@mixin center-horizontal($position: absolute) {
+	top: 50%;
+	-webkit-transform: translate(0, -50%);
+	-moz-transform: translate(0, -50%);
+	-o-transform: translate(0, -50%);
+	-ms-transform: translate(0, -50%);
+	transform: translate(0, -50%);
+
+	position: $position;
+}
+
+@mixin center($position: absolute) {
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+
+	position: $position;
+}
+
+@mixin border-radius($size: 6px) {
+	border-radius: $size $size $size $size;
+	-moz-border-radius: $size $size $size $size;
+	-webkit-border-radius: $size $size $size $size;
+}
+
+@mixin transition($time: 2ms) {
+	-webkit-transition: all $time ease-in-out;
+	-moz-transition: all $time ease-in-out;
+	-ms-transition: all $time ease-in-out;
+	-o-transition: all $time ease-in-out;
+	transition: all $time ease-in-out;
+}

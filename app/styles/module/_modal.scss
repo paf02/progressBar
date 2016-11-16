@@ -1,0 +1,134 @@
+.centerEl {
+  @include center(fixed);
+	
+}
+
+.modal-container {
+  height: 206px;
+  width: 514px;
+  border: 1px solid $containerBorder;
+  @include border-radius(5px);
+  background-color: $containerBackgroundColor;
+
+  & + .modal-container {
+  	margin-top: 10px;
+  }
+
+  .dollar-sign {
+		&:before {
+			content: '$';
+		}
+  }
+
+  .modal-container-title {
+		font-size: 17px;
+    padding: 6px;
+    color: $copyColor;
+    background-color: $headerBackgroundColor;
+    @include border-radius(5px);
+  }
+
+  .modal-content {
+  	border: 1px solid $containerBorder;
+  	background-color: $modalContentBackgroundColor;
+  	margin: 12px 21px;
+  	@include border-radius(5px);
+		font-size: 0;
+		padding: 12px 38px;
+
+  	.progress-container {
+  		> * {
+  			display: inline-block;
+   			vertical-align: middle;
+  		}
+  	}
+  }
+
+  .reached-container {
+		font-size: 17px;
+		color: $secondColor;
+		font-weight: 800;
+  }
+
+  .progressbar-container {
+		width: 212px;
+		height: 12px;
+		background-color: #f7f7f7;
+		border-top: 1px solid #eaeaea;
+		margin: 0 1px 0 9px;
+		position: relative;
+
+		.progressbar-progress {
+			position: absolute;
+			left: 0;
+			top: 0;
+			bottom: 0;
+			width: 0%;
+	    display: inline-block;
+	    @include transition(300ms);
+
+	    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#5dc169+0,55ad5f+100 */
+			background: #5dc169; /* Old browsers */
+			background: -moz-linear-gradient(top,  #5dc169 0%, #55ad5f 100%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(top,  #5dc169 0%,#55ad5f 100%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(to bottom,  #5dc169 0%,#55ad5f 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5dc169', endColorstr='#55ad5f',GradientType=0 ); /* IE6-9 */
+
+
+	    .progressbar-val {
+				&:after {
+					content: ' ';
+					display: block;
+					background-image: url(../images/arrow.png);
+			    width: 13px;
+			    height: 10px;
+			    position: absolute;
+			    left: 25px;
+  				top: -17px;
+				}
+
+  	    display: inline-block;
+				font-size: 16px;
+				position: absolute;
+				bottom: -36px;
+				right: -28px;
+				width: 60px;
+    		text-align: center;
+	    }
+		}
+  }
+
+  .target-container {
+		background-color: $containerTargetBackgroundColor;
+		border: 1px solid $containerBorder;
+		color: $copyColor;
+		text-align: center;
+		margin: 0 auto;
+
+    font-size: 17px;
+    padding: 5px;
+
+		.br {
+			display: block;
+		}
+  }
+
+  .disclaimer {
+    font-size: 17px;
+    text-align: center;
+    margin: 36px auto 13px;
+    position: relative;
+    color: $secondColor;
+
+    &:after {
+			content: ' ';
+			display: block;
+			background-image: url(../images/info.png);
+      width: 20px;
+	    height: 18px;
+	    position: absolute;
+	    left: 14px;
+	    top: -2px;
+		}
+  }
+}
